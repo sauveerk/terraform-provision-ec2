@@ -3,6 +3,9 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
+  paths:
+      - '**/*.tf'       # Only trigger on changes to Terraform files
+      - '**/*.tfvars'   # Only trigger on changes to tfvars files  
   #paths-ignore:
   #    - '.github/workflows/provision_ec2.yml'  # Exclude changes to the workflow file
 
@@ -19,7 +22,7 @@ jobs:
       run:
         shell: bash
 
-    if: "!contains(github.event.head_commit.message, '.github/workflows/provision_ec2.yml')"  # Only run if terraform.yml is not in commit message
+    #if: "!contains(github.event.head_commit.message, '.github/workflows/provision_ec2.yml')"  # Only run if terraform.yml is not in commit message
 
 
     steps:
