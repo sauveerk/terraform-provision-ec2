@@ -3,8 +3,8 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
-  paths-ignore:
-      - '.github/workflows/provision_ec2.yml'  # Exclude changes to the workflow file
+  #paths-ignore:
+  #    - '.github/workflows/provision_ec2.yml'  # Exclude changes to the workflow file
 
 permissions:
   contents: read
@@ -18,6 +18,9 @@ jobs:
     defaults:
       run:
         shell: bash
+
+    if: "!contains(github.event.head_commit.message, '.github/workflows/provision_ec2.yml')"  # Only run if terraform.yml is not in commit message
+
 
     steps:
     # Checkout the repository to the GitHub Actions runner
