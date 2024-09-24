@@ -3,8 +3,8 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
-      paths:
-      - '!.github/workflows/*.yml'
+    paths:
+       - '!.github/workflows/*.yaml'
 
 permissions:
   contents: read
