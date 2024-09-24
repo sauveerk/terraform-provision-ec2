@@ -25,6 +25,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Set state file name
+      run: TF_STATE_FILE=terraform.tfstate-${{ github.run_id }}
+
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
