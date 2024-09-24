@@ -1,3 +1,5 @@
+#Configure AWS S3 bucket as remote backend
+
 terraform {
   backend "s3" {
     bucket         = "terraform-state-backend-xdf3489xz "
