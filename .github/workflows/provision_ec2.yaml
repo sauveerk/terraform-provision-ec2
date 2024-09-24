@@ -3,11 +3,8 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
-  paths:
-      - '**/*.tf'       # Only trigger on changes to Terraform files
-      - '**/*.tfvars'   # Only trigger on changes to tfvars files  
-  #paths-ignore:
-  #    - '.github/workflows/provision_ec2.yml'  # Exclude changes to the workflow file
+      paths:
+      - '!.github/workflows/*.yml'
 
 permissions:
   contents: read
