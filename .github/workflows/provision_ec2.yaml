@@ -19,9 +19,7 @@ jobs:
       run:
         shell: bash
 
-    #if: "!contains(github.event.head_commit.message, '.github/workflows/provision_ec2.yml')"  # Only run if terraform.yml is not in commit message
-
-
+    
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
