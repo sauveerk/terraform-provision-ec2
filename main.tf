@@ -18,6 +18,7 @@ resource "aws_security_group" "ec2-security-group" {
 }
 */
 
+
 # Creating Ubuntu EC2 instance
 resource "aws_instance" "ubuntu-ec2-instance" {
   ami                         = var.ubuntu-ami
