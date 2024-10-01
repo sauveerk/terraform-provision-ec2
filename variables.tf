@@ -11,6 +11,8 @@ variable "ubuntu-instance-type" {
 
 }
 
+/*
 variable "state_file_suffix" {
     
 }
+*/
