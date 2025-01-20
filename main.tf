@@ -16,6 +16,7 @@ resource "aws_security_group" "ec2-security-group" {
     Name = "ec2-sg-inbound"
   }
 }
+
 */
 
 
